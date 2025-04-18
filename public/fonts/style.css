@@ -1,0 +1,20 @@
+  @font-face {
+    font-family: 'font-regular';
+    src: url('Graphik-Regular.eot');
+    src: local('Graphik Regular'), local('Graphik-Regular'),
+        url('Graphik-Regular.woff2') format('woff2'),
+        url('Graphik-Regular.woff') format('woff'),
+        url('Graphik-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'font-medium';
+    src: url('Graphik-Medium.eot');
+    src: local('Graphik Medium'), local('Graphik-Medium'),
+        url('Graphik-Medium.woff2') format('woff2'),
+        url('Graphik-Medium.woff') format('woff'),
+        url('Graphik-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
