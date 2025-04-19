@@ -4,21 +4,25 @@ import Headline from "@/components/headline";
 import SecondHeadline from "@/components/SecondHeadline";
 import Title from "@/components/Title";
 import SubHeading from "@/components/SubHeading";
+import Button from "@/components/Button";
+import Subtitle from "@/components/Subtitle";
 import TextButton from "@/components/TextButton";
 import Paragraph from "@/components/Paragraph";
-import Subtitle from "@/components/Subtitle";
 import Link from "@/components/Link";
 import MobileMenu from "@/components/MobileMenu";
 import Logo from "@/components/logo";
 import Logodark from "@/components/logodark";
-import Button from "@/components/Button";
 import Input from "@/components/input";
 import MailingInput from "@/components/mailinginput";
 import Card from "@/components/Card";
 import Avatar from "@/components/avatar";
+
+
+import Header from "@/components/Header";
 export default function Home() {
   return (
     <>
+      <Header />
       {/* <Logo />
       <Logodark />
       <Avatar imageUrl="/images/avatar.png" />

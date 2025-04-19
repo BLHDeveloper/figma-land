@@ -1,9 +1,15 @@
 import React from "react";
-
+import Image from "next/image";
 const Logodark = () => {
   return (
-    <div className="w-[275px] h-[136px] flex-shrink-0 bg-[#181818]">
-      <div className="w-[186px] h-[58px] bg-[url('/images/logo.png')] bg-lightgray bg-contain bg-no-repeat"></div>
+    <div className="inline-flex p-[10px] items-start gap-[10px]">
+      <Image
+        src="/images/Logodark.png"
+        alt="Illustration"
+        width={186}
+        height={58}
+        style={{ width: "auto", height: "auto" }} // Ensure aspect ratio is maintained
+      />
     </div>
   );
 };

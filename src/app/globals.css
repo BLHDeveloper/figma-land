@@ -2,11 +2,10 @@
 @import "../../public/fonts/style.css";
 :root {
   --dark-background: #181818;
-  --foreground: #fff;
+  --white: #fff;
   --dark: #000;
-  --second-text: #5C5C5C;
+  --second-text: #5c5c5c;
 }
-
 body {
   background: var(--dark-background);
   color: var(--dark);
@@ -14,17 +13,18 @@ body {
   flex-direction: column;
   align-items: flex-start;
   gap: 100px;
-  font-family: "font-regular", "font-medium";
+  font-family: "font-regular", "font-med";
 }
 h1 {
-  font-family: "font-medium";
+  text-align: center;
+  color: var(--white);
+  font-family: "font-med";
   font-size: 80px;
   font-style: normal;
   font-weight: 500;
   line-height: 88px; /* 110% */
   letter-spacing: 0.2px;
 }
-
 h2 {
   font-family: "font-regular";
   font-size: 52px;
@@ -33,40 +33,47 @@ h2 {
   line-height: 62px; /* 119.231% */
   letter-spacing: 0.2px;
 }
-
 h3 {
-font-family: "font-medium";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: 30px; /* 150% */
-letter-spacing: 0.1px;
+  font-family: "font-med";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px; /* 150% */
+  letter-spacing: 0.1px;
 }
 
 p {
-color: var(--second-text);
-font-family: "font-regular";
-font-style: normal;
-font-weight: 400;
-letter-spacing: 0.2px;
+  color: var(--white);
+  text-align: center;
+  font-family: "font-regular";
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.2px;
 }
 
 span {
-color: var(--second-text);
-font-family: "font-medium";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-letter-spacing: 0.1px;
+  color: var(--second-text);
+  font-family: "font-med";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.1px;
 }
 
 a {
-color: var(--dark);
-font-family: "font-medium";
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 24px; /* 150% */
-letter-spacing: 0.2px;
+  color: var(--white);
+  text-align: center;
+  font-family: "font-med";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px; /* 150% */
+  letter-spacing: 0.2px;
 }
+
+button {
+  cursor: pointer;
+}
+
+

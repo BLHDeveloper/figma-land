@@ -9,7 +9,7 @@
     font-style: normal;
 }
 @font-face {
-    font-family: 'font-medium';
+    font-family: 'font-med';
     src: url('Graphik-Medium.eot');
     src: local('Graphik Medium'), local('Graphik-Medium'),
         url('Graphik-Medium.woff2') format('woff2'),

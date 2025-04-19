@@ -4,7 +4,7 @@ import Paragraph from './Paragraph';
 import Button from './Button';
 const Card = ({ title, description, text }) => {
   return (
-    <div class="flex w-[430px] px-0 py-[40px] flex-col items-center gap-[30px] rounded-[10px] border border-[#D3D3D3] bg-white">
+    <div className="flex w-[430px] px-0 py-[40px] flex-col items-center gap-[30px] rounded-[10px] border border-[#D3D3D3] bg-white">
       <Title title={title} className="text-black text-center" />
       <Paragraph
         paragraph={description}
