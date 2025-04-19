@@ -4,11 +4,14 @@ import Link from "@/components/Link";
 import Button from "./Button";
 import "../../public/fonts/style.css";
 import Image from "next/image";
+import Headline from "@/components/headline";
+import SubHeading from "@/components/SubHeading";
+
 const Header = () => {
   return (
     <header className="flex flex-col items-center gap-[35px] self-stretch">
       {/* navbar*/}
-      <div className="flex items-center justify-between w-[1097px] h-[119px]">
+      <div className="flex items-center justify-between w-[1000px] h-[119px]">
         <Logodark />
         <div className="inline-flex items-center gap-2.5">
           <div className="flex items-center gap-[31px]">
@@ -25,17 +28,23 @@ const Header = () => {
       </div>
       {/* Text */}
       <div className="flex flex-col items-center py-[50px] gap-[17px] self-stretch">
-        <div className="flex p-2.5 items-center gap-2.5">
-          <h1>
-            Work at the speed <br /> of thought
-          </h1>
-        </div>
-        <div className="flex items-center gap-[10px] p-[10px]">
-          <div className="text-white text-center  text-[20px] font-normal leading-[30px] tracking-[0.2px]">
-            Most calendars are designed for teams. Slate is designed for <br />
-            freelancers who want a simple way to plan their schedule.
-          </div>
-        </div>
+        <Headline
+          title={
+            <>
+              Work at the speed <br />
+              of thought
+            </>
+          }
+        />
+        <SubHeading
+          paragraph={
+            <>
+              Most calendars are designed for teams. Slate is designed for
+              <br />
+              freelancers who want a simple way to plan their schedule.
+            </>
+          }
+        />
       </div>
       {/* buttons */}
       <div className="flex items-center gap-[35px]">
