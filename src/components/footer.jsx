@@ -99,7 +99,7 @@ const Footer = () => {
 
   return (
     <footer className="flex flex-col items-center py-[107px] self-stretch">
-      <div className="flex items-start gap-[199px]">
+      <div className="hidden sm:flex items-start gap-[199px]">
         <div className="flex flex-col items-start gap-[56px]">
           <div className="flex items-start gap-[75px]">
             {sections.map((section, index) => (
@@ -114,6 +114,37 @@ const Footer = () => {
             ))}
           </div>
         </div>
+        <div className="flex flex-col items-start gap-[10px]">
+          {contactInfo.map((info, index) => (
+            <div key={index} className="flex items-center">
+              <div className="w-[46px] h-[46px]">{info.icon}</div>
+              <Link href="" text={info.text} />
+            </div>
+          ))}
+          <div className="flex items-center gap-6 py-5">
+            {socialIcons.map((icon, index) => (
+              <div key={index} className="w-[40.987px] h-[40.987px]">
+                {icon}
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className="flex flex-col sm:hidden items-start gap-[75px]">
+        {sections.map((section, index) => (
+          <div key={index} className="flex flex-col items-start gap-[40px]">
+            <Link
+              href=""
+              text={section.title}
+              className="!text-[20px] !leading-[30px] !tracking-[0.1px]"
+            />
+            <div className="flex flex-col items-start w-[121px] gap-[19px]">
+              {section.links.map((link, idx) => (
+                <Link key={idx} href="" text={link} />
+              ))}
+            </div>
+          </div>
+        ))}
         <div className="flex flex-col items-start gap-[10px]">
           {contactInfo.map((info, index) => (
             <div key={index} className="flex items-center">

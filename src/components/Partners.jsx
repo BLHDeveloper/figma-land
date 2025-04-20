@@ -311,35 +311,82 @@ const Partners = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center gap-[50px] px-[20px] py-[50px] self-stretch">
-      <div className="flex flex-col items-center">
-        <SecondHeadline text="Partners" />
-        <SubHeading
-          paragraph={
-            <>
-              We focus on ergonomics and meeting you where you work.
-              <br />
-              It's only a keystroke away.
-            </>
-          }
+    <>
+      <div className="max-sm:hidden flex flex-col items-center gap-[50px] px-[20px] py-[50px] self-stretch">
+        <div className="flex flex-col items-center">
+          <SecondHeadline text="Partners" />
+          <SubHeading
+            paragraph={
+              <>
+                We focus on ergonomics and meeting you where you work.
+                <br />
+                It's only a keystroke away.
+              </>
+            }
+          />
+        </div>
+        <div className="flex items-center gap-[74px]">
+          {partners.map((partner) => (
+            <div
+              key={partner.id}
+              className={`w-[${partner.width}px] h-[${partner.height}px]`}
+            >
+              {partner.svg}
+            </div>
+          ))}
+        </div>
+        <Button
+          text="All Partners"
+          className=" bg-[#181818] h-[52px] border border-white shadow-[0px_4px_31px_rgba(0,0,0,0.15)]"
         />
       </div>
-      <div className="flex items-center gap-[74px]">
-        {partners.map((partner) => (
-          <div
-            key={partner.id}
-            className={`w-[${partner.width}px] h-[${partner.height}px]`}
-          >
-            {partner.svg}
+      <div className="hidden max-sm:flex flex-col items-center gap-[50px] px-[20px] py-[50px] self-stretch">
+        <div className="flex flex-col items-center">
+          <SecondHeadline text="Partners" />
+          <SubHeading
+            paragraph={
+              <>
+                We focus on ergonomics
+                <br />
+                and meeting you where you work.
+                <br />
+                It's only a keystroke away.
+              </>
+            }
+          />
+        </div>
+        <div className="flex flex-col items-center gap-[50px]">
+          <div className="flex items-center gap-[50px]">
+            {partners.slice(0, 3).map((partner) => (
+              <div
+                key={partner.id}
+                className={`w-[${partner.width}px] h-[${partner.height}px]`}
+              >
+                {partner.svg}
+              </div>
+            ))}
           </div>
-        ))}
+          <div className="flex items-center gap-[50px]">
+            {partners.slice(3, 6).map((partner) => (
+              <div
+                key={partner.id}
+                className={`w-[${partner.width}px] h-[${partner.height}px]`}
+              >
+                {partner.svg}
+              </div>
+            ))}
+          </div>
+        </div>
+        <Button
+          text="All Partners"
+          className=" bg-[#181818] h-[52px] border border-white shadow-[0px_4px_31px_rgba(0,0,0,0.15)]"
+        />
       </div>
-      <Button
-        text="All Partners"
-        className=" bg-[#181818] h-[52px] border border-white shadow-[0px_4px_31px_rgba(0,0,0,0.15)]"
-      />
-    </div>
+    </>
   );
 };
 
 export default Partners;
+
+
+

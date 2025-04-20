@@ -76,7 +76,8 @@ const features = [
 const Feature = () => {
   return (
     <>
-      <div className="flex flex-col items-start gap-[10px] px-[50px] py-[62px] self-stretch">
+      {/* Section pour les écrans plus grands */}
+      <div className="hidden sm:flex flex-col items-start gap-[10px] px-[50px] py-[62px] self-stretch">
         <div className="flex flex-col items-center gap-20 self-stretch">
           <div className="flex flex-col items-center gap-[27px]">
             <SecondHeadline text="FEATURES" />
@@ -90,7 +91,6 @@ const Feature = () => {
               }
             />
           </div>
-
           <div className="flex items-center gap-[27px]">
             <Image
               src="/images/Frame 19.png"
@@ -100,6 +100,58 @@ const Feature = () => {
               className="flex"
             />
             <div className="flex flex-col items-start gap-6 p-5">
+              {features.map((feature, index) => (
+                <div
+                  key={index}
+                  className="flex w-[269px] flex-col items-start"
+                >
+                  <div className="flex items-start">
+                    <div className={feature.className}>{feature.icon}</div>
+                    <Title title={feature.title} />
+                  </div>
+                  <Paragraph
+                    paragraph={
+                      <>
+                        When you add work to your
+                        <br />
+                        Slate calendar we automatically
+                        <br />
+                        calculate useful insights
+                      </>
+                    }
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Section pour les écrans max-sm */}
+      <div className="flex sm:hidden flex-col items-start gap-[10px] px-[50px] py-[62px] self-stretch">
+        <div className="flex flex-col items-center gap-[27px] self-stretch">
+          <div className="flex flex-col items-center gap-[27px]">
+            <SecondHeadline text="FEATURES" />
+            <SubHeading
+              paragraph={
+                <>
+                  Most calendars are designed for teams.
+                  <br />
+                  Slate is designed for freelancers who want
+                  <br />a simple way to plan their schedule.
+                </>
+              }
+            />
+          </div>
+          <div className="flex flex-col items-center gap-[27px]">
+            <Image
+              src="/images/Frame 19.png"
+              alt="Illustration"
+              width={376}
+              height={406}
+              className="flex"
+            />
+            <div className="flex flex-col items-start gap-[25px] p-5">
               {features.map((feature, index) => (
                 <div
                   key={index}
